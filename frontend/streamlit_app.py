@@ -351,7 +351,7 @@ def main():
     st.markdown(
         '''
         <div style="margin-top: 50px; padding: 1rem; text-align: center; border-top: 1px solid #e0e0e0;">
-            Built by <a href="https://www.ryanmcdonough.co.uk/" target="_blank">Ryan McDonough</a>
+            Initially built by <a href="https://www.ryanmcdonough.co.uk/" target="_blank">Ryan McDonough</a> and Evolved by <a href="https://www.dazzagreenwood.com/" target="_blank">Dazza Greenwood</a>
         </div>
         ''',
         unsafe_allow_html=True
