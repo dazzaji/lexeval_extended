@@ -1,0 +1,38 @@
+[theme]
+# Primary color for interactive elements
+primaryColor = "#2b6777"
+
+# Background color for the main content area
+backgroundColor = "#f5f5f5"
+
+# Background color for sidebar and most interactive widgets
+secondaryBackgroundColor = "#e0e7ef"
+
+# Color used for almost all text
+textColor = "#262730"
+
+# Font family for all text in the app
+font = "sans serif"
+
+[server]
+# Max size, in megabytes, for files uploaded with the file_uploader
+maxUploadSize = 200
+
+# Max size, in megabytes, of messages that can be sent via the WebSocket connection
+maxMessageSize = 200
+
+# Enables support for Cross-Origin Resource Sharing (CORS) protection
+enableCORS = false
+
+# Enables support for websocket cross-origin resource sharing
+enableWebsocketCompression = true
+
+[browser]
+# Internet address where users should point their browsers to connect to the app
+serverAddress = "localhost"
+
+# Port where users should point their browsers to connect to the app
+serverPort = 8501
+
+# Automatically rerun script when the file is modified on disk
+gatherUsageStats = false

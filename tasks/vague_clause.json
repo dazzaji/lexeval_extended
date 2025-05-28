@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "task_name": "vague_clause",
+  "description": "Legal evaluation tasks for vague_clause",
+  "created_at": 1748232186,
+  "tasks": [
+    {
+      "task_name": "Discretion-Based Termination Clause",
+      "task_id": "discretion_based_termination_clause",
+      "prompt": "Identify any vague or undefined terms in the clause. Focus on phrases that:\n- grant broad discretion without defined criteria\n- use open-ended business judgments like 'appropriate' or 'commercially viable'\n- rely on vague conditions like 'prevailing circumstances'\nExplain how these impact clarity or consistency of interpretation.",
+      "context": "The Company may, at its sole discretion and without prior notice, terminate this Agreement at any time if it deems that continued engagement is no longer commercially viable or appropriate in light of prevailing circumstances.",
+      "expected_output": "Vagueness arises from:\n- 'At its sole discretion' gives the Company unchecked control with no criteria.\n- 'Commercially viable or appropriate' are subjective terms with no measurable standard.\n- 'Prevailing circumstances' is broad and undefined, allowing arbitrary interpretation.\nThese elements introduce risk and lack predictability, particularly for machine interpretation.",
+      "reference": "Termination clauses and good faith limitations in contract law",
+      "metric": "keyword_match",
+      "metadata": {
+        "created_at": 1748232186,
+        "last_modified": 1748232186
+      }
+    },
+    {
+      "task_name": "Undefined Compliance Obligation",
+      "task_id": "undefined_compliance_obligation",
+      "prompt": "Identify any vague or undefined terms in the clause. Focus on elements that:\n- reference external standards without citation (e.g., 'applicable laws', 'best practices')\n- grant unilateral interpretation rights to one party\n- include undefined internal standards like 'deemed appropriate'\nExplain how these limit clarity for contractual analysis or automation.",
+      "context": "In order to comply with applicable laws and industry best practices as reasonably interpreted by the Supplier, the Data shall be stored and processed in a manner deemed appropriate by the Supplier's internal data governance team.",
+      "expected_output": "The clause includes layered vagueness:\n- 'Applicable laws and industry best practices' is broad, with no specific references.\n- 'As reasonably interpreted by the Supplier' gives unilateral interpretive authority.\n- 'Deemed appropriate' is undefined and relies on internal, undisclosed criteria.\nThis introduces risk of overreach, inconsistent application, and poor interpretability by AI.",
+      "reference": "Data protection clauses and clarity in compliance frameworks",
+      "metric": "llm_judge",
+      "metadata": {
+        "created_at": 1748232186,
+        "last_modified": 1748232186
+      }
+    },
+    {
+      "task_id": "task_3",
+      "prompt": "Identify which category the provided context best fits into.  Below are the available categories:\n\n-----\n\n### Sales Owns or QBs\nCommercial Issues\n* Fees\n* Payment Terms\n* Usage Metrics\n* Overages\n* Interest\n* Refunds\n* Non-Payment Suspension\n* Affiliates\n* Taxes\n* Usage Verification\n* Subscription Review\n* Termination\n* SOWs\n* Use of Purchase Orders\n\n### Sales QBs\nProduct Issues\n* Updates\n* Beta Services\n* Third-Party Apps\n* Customer Data\n* Statistical Usage Data\n* Product Security\n* Data Deletion\n* ITAR\n* Searchability\n* Authorized Users\n* Documentation\n* Professional Services\n* SLA\n* Downtime\n* Support\n* Warranty Remedies\n\n### Legal QBs\nRisk and Compliance\n* Restrictions\n* Indemnification\n* Limitation of Liability\n* Warranty Remedies\n* Suspension\n* Export Control\n* Anti-Corruption\n\n### Legal Owns\nLegal Issues\n* Data Privacy & Protection Regs\n* Resellers\n* IP Ownership\n* Warranties\n* Disclaimers\n* Surviving Provisions\n* Government Rights\n* Governing Law\n* Venue\n* Dispute Resolution\n* Arbitration\n* Notices\n* Assignment\n* Force Majeure\n",
+      "context": "1.  Procore shall defend any claim brought against Customer by a third-party to the extent such claim alleges that Customer\u2019s use of the Subscription Services (as authorized in this Agreement, and as provided by Procore to Customer) (1) infringes any valid and enforceable third-party patent, copyright, or registered trademark, or (2) misappropriates a third-party trade secret (a \u201c**Claim**\u201d). If a third party makes a Claim against Customer, Procore shall pay all damages (including reasonable attorneys\u2019 fees) finally awarded against Customer by a court of competent jurisdiction, or the settlement agreed to by Procore with respect to such Claim. \n2.  If any Claim is brought or threatened, or if Procore reasonably believes that the Subscription Services may become the subject of a Claim, Procore may, at its sole option and expense (1) procure for Customer the right to continue to use the applicable Subscription Service; (2) modify the Subscription Service to make it non-infringing; (3) replace the affected aspect of the Subscription Service with non-infringing technology having substantially similar capabilities; or (4) if Procore determines none of the foregoing is commercially practicable, terminate this Agreement upon thirty (30) days\u2019 notice and refund Customer any prepaid Fees related to the applicable Subscription Services prorated for the remainder of the Subscription Term. ",
+      "expected_output": "The best classification is: Legal QBs, Risk and Compliance, Indemnification",
+      "reference": "",
+      "metric": "llm_judge",
+      "task_name": "task_3",
+      "judge_model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "metadata": {
+        "created_at": 1748232186,
+        "last_modified": 1748232186
+      }
+    }
+  ]
+}
